@@ -37,56 +37,6 @@ function ReactDnd() {
     setPlayer((prev) => [...prev, item]);
   };
 
-// const [{ isOver, dragIndex, hoverIndex }, addToTeamRef] = useDrop({
-//     accept: "player",
-//     collect: (monitor) => ({
-//       isOver: !!monitor.isOver(),
-//       dragIndex: monitor.getItem() && monitor.getItem().index,
-//       hoverIndex: monitor.isOver() ? getHoverIndex(monitor) : null,
-//     }),
-//   });
-
-//   const [{ isOver: isPlayerOver, dragIndex: teamDragIndex, hoverIndex: teamHoverIndex }, removeFromTeamRef] = useDrop({
-//     accept: "team",
-//     collect: (monitor) => ({
-//       isOver: !!monitor.isOver(),
-//       dragIndex: monitor.getItem() && monitor.getItem().index,
-//       hoverIndex: monitor.isOver() ? getHoverIndex(monitor) : null,
-//     }),
-//   });
-
-//   const movePlayerToTeam = (item) => {
-//     setPlayer((prev) => prev.filter((_, i) => i !==  item.index ));
-//     if (hoverIndex === null) {
-//       setTeam((prev) => [...prev, item]);
-//     } else {
-//       setTeam((prev) => {
-//         const temp = [...prev];
-//         temp.splice(hoverIndex, 0, item);
-//         return temp;
-//       });
-//     }
-//   };
-
-//   const removePlayerFromTeam = (item) => {
-//     setTeam((prev) => prev.filter((_, i) => i !==  item.index ));
-//     if (hoverIndex === null) {
-//       setPlayer((prev) => [...prev, item]);
-//     } else {
-//       setPlayer((prev) => {
-//         const temp = [...prev];
-//         temp.splice(hoverIndex, 0, item);
-//         return temp;
-//       });
-//     }
-//   };
-
-//   const getHoverIndex = (monitor) => {
-//     const { index: hoverIndex } = monitor.getTargetBoundingRect();
-//     const { clientY } = monitor.getClientOffset();
-//     const { height } = monitor.getItemBoundingRect();
-//     return clientY < hoverIndex + height / 2 ? hoverIndex : hoverIndex + 1;
-//   };
 
   return (
     <Container maxW="800px">
