@@ -1,0 +1,19 @@
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: move;
+    opacity: 1;
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .card.isDragging {
+    opacity: 0.5;
+  }
+  
+  .card.isActive {
+    background-color: #f7f7f7;
+  }
+  
